@@ -5,7 +5,7 @@ const  customerController = require('../controllers/customerControl');
 
 router.get('/', customerController.homepage);
 router.get('/add', customerController.addCustomer);
-
+router.post('/add', customerController.addCustomerPost);
 // app.get('/', (req, res) => {
 //     const locals = {
 //         title: 'Home',
