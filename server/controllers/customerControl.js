@@ -49,9 +49,15 @@ exports.addCustomerPost = async(req,res)=>{
     // res.send("Hello World");
     try{
         await Customer.create(newCustomer);
-
         res.redirect('/');
     }catch(err){
         console.log(err);
     }
+}
+
+exports.dashboard = async(req,res)=>{
+    var result = new Customer();
+    result = await Customer.find();
+    console.log(result);
+    res.render('./customer/dashboard', {result});
 }
