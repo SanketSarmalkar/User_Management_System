@@ -17,17 +17,16 @@
     <button type="submit" class="btn btn-primary">Search</button>
   </form>
 </div>
-
 <div class="d-flex row justify-content-between flex-wrap flex-md nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <% for (let i = 0; i < result.length; i++) { %>
-      <div class="col-md-4 my-1" key="<%= result[i]._id%>">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title"><%= result[i].firstName %> <%= result[i].lastName %></h5>
-            <p class="card-text"><%= result[i].email %></p>
-          </div>
+  <% for (let i = 0; i < result.length; i++) { %>
+    <div class="col-md-4 my-1" key="<%= result[i][0]._id%>">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><%= result[i][0].firstName %> <%= result[i][0].lastName %></h5>
+          <p class="card-text"><%= result[i][0].email %></p>
         </div>
       </div>
-    <% } %>
-  </div>
+    </div>
+  <% } %>
+</div>
   

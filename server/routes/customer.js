@@ -7,6 +7,7 @@ router.get('/', customerController.homepage);
 router.get('/add', customerController.addCustomer);
 router.post('/add', customerController.addCustomerPost);
 router.get('/dashboard', customerController.dashboard);
+router.post('/dashboard', customerController.findCustomer);
 // app.get('/', (req, res) => {
 //     const locals = {
 //         title: 'Home',
